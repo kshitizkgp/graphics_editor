@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.JFileChooser" name="image_chooser">
+    </Component>
+    <Menu class="javax.swing.JMenuBar" name="menu">
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="file_handle">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="File"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="New">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="New"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NewActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="Save">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Save"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="load">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Load"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="Exit">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Exit"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="insert">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Insert"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="images">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="bitmap"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+      </SubComponents>
+    </Menu>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="menuBar" type="java.lang.String" value="menu"/>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <Component id="left_toolbar" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="Bottom_toolbar" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="DrawingArea" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="left_toolbar" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Component id="DrawingArea" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="Bottom_toolbar" min="-2" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="left_toolbar">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="Line" min="-2" pref="28" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="select" min="-2" pref="15" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="zoom" alignment="1" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="text" alignment="1" min="-2" pref="31" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                          <Component id="Rect" min="-2" pref="27" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="Ellipse" min="-2" pref="24" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="poly" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="circle" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="normal" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
+                      <Component id="fit" alignment="0" min="-2" pref="22" max="-2" attributes="0"/>
+                      <Component id="out" alignment="0" min="-2" pref="24" max="-2" attributes="0"/>
+                      <Component id="copy" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="Rect" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="Ellipse" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="Line" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                      <Component id="select" alignment="3" min="-2" pref="17" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="poly" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="text" alignment="3" min="-2" pref="17" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="circle" min="-2" pref="20" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="normal" min="-2" pref="20" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="fit" min="-2" pref="16" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="out" min="-2" pref="18" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="copy" min="-2" pref="20" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="zoom" min="-2" pref="20" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="Rect">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="Rect"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="Ellipse">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Ellipse"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="Line">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Line"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="select">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Select"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="poly">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Poly"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="circle">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="circle"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="zoom">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Zoom"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="normal">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="normal"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="fit">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="fit"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="out">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="zoomOut"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="text">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Text"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="copy">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="copy"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="Bottom_toolbar">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="delete" min="-2" pref="28" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="change_properties" min="-2" pref="22" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="pan" min="-2" pref="30" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="sel_multiple" min="-2" pref="31" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="make_group" min="-2" pref="36" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                  <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="delete" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                      <Component id="change_properties" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                      <Component id="pan" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                      <Component id="sel_multiple" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
+                      <Component id="make_group" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="delete">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Delete"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="change_properties">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="property"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="pan">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pan"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="sel_multiple">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="select_multiple"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="make_group">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Group"/>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JPanel" name="jPanel1">
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="clip1" min="-2" pref="29" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="clip3" min="-2" pref="19" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="clip2" min="-2" pref="26" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="clip4" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="clip6" min="-2" pref="21" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="clip8" min="-2" pref="25" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="clip5" min="-2" pref="23" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="clip7" min="-2" pref="17" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="clip10" alignment="0" min="-2" pref="15" max="-2" attributes="0"/>
+                          <Component id="clip9" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Add" min="-2" max="-2" attributes="0"/>
+                          <Component id="remove" min="-2" pref="24" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="94" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="clip1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="clip3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="clip5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="clip7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="clip9" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Add" alignment="3" min="-2" pref="17" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="clip2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="clip4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="clip6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="clip8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="clip10" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="remove" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="clip1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="clip1"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="clip2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="clip2"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="clip3">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="clip3"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="clip4">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="clip4"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="clip5">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="clip5"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="clip6">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="clip6"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="clip7">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="clip7"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="clip8">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="clip8"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="clip9">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="clip9"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="clip10">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="clip10"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="Add">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Add"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="remove">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Remove"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+    <Container class="graphicseditor.PaintSurface" name="DrawingArea">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="513" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="270" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+    </Container>
+  </SubComponents>
+</Form>
